@@ -1,0 +1,239 @@
+.goods {
+  background-color: $colorGrey;
+  height: 954px;
+  @include mediaTablet {
+    height: auto;
+    padding: 10px;
+  }
+  @include mediaMobile {
+    height: auto;
+    padding-bottom: 50px;
+  }
+  .content-box {
+    width: calc(100% - 50px);
+  }
+
+  &__img {
+    @include mediaTablet {
+      width: 80px;
+    }
+    @include mediaMobile {
+      width: 100px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    justify-content: center;
+    @include mediaTablet {
+      display: grid;
+    }
+    @include mediaMobile {
+      padding: 20px;
+    }
+  }
+
+  &__title {
+    @include fontStyle($fontRoboto, $fontBold, 24);
+    @include fontLh(28);
+    color: $colorDark;
+    margin-top: 80px;
+    @include mediaMobile {
+      @include fontStyle($fontRoboto, $fontNormal, 22);
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 0.7fr);
+    grid-gap: 30px;
+    margin: 38px 0;
+    @include mediaMobile {
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    background: $colorWhite;
+    text-align: -webkit-center;
+    padding: 25px 0 0;
+  }
+
+  &__descr {
+    margin: 30px;
+    @include fontStyle($fontRoboto, $fontNormal, 14);
+    @include fontLh(20);
+    color: $colorDark;
+    @include mediaTablet {
+      @include fontStyle($fontRoboto, $fontMedium, 10);
+    }
+    @include mediaMobile {
+      @include fontStyle($fontRoboto, $fontMedium, 12);
+    }
+  }
+
+  &__price {
+    @include fontStyle($fontRoboto, $fontMedium, 21);
+    @include fontLh(25);
+    color: $colorDark;
+    @include mediaTablet {
+      @include fontStyle($fontRoboto, $fontMedium, 16);
+    }
+    @include mediaMobile {
+      @include fontStyle($fontRoboto, $fontMedium, 18);
+    }
+  }
+
+  &__btn {
+    width: 130px;
+    height: 35px;
+    margin: 20px 0 25px;
+    background: $colorGreen;
+    border-radius: 30px;
+    border: none;
+    color: $colorWhite;
+    letter-spacing: 0.05em;
+
+    @include fontStyle($fontRoboto, $fontNormal, 14);
+    @include fontLh(16);
+    @include cursorPointer;
+    &:active,
+    &:hover {
+      background: transparent;
+      color: $colorGreen;
+      box-shadow: 4px 4px 4px $colorGreen;
+    }
+    @include mediaTablet {
+      @include fontStyle($fontRoboto, $fontNormal, 12);
+      width: 100px;
+      height: 25px;
+    }
+    @include mediaMobile {
+      @include fontStyle($fontRoboto, $fontMedium, 12);
+    }
+  }
+}
+
+.subscribe {
+  &__img {
+    @include mediaTablet {
+      width: 60px;
+    }
+    @include mediaMobile {
+      width: 100px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    height: 212px;
+    @include mediaTablet {
+      margin: 20px 0;
+    }
+    @include mediaMobile {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
+  &__item {
+    background: $colorGreen;
+    display: flex;
+    flex-basis: 40%;
+    align-items: center;
+    padding: 45px 35px;
+    gap: 80px;
+    @include mediaTablet {
+      flex-basis: 50%;
+      padding: 45px 35px;
+      gap: 18px;
+    }
+    @include mediaMobile {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%;
+      gap: 40px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    @include fontStyle($fontRoboto, $fontBold, 18);
+    @include fontLh(21);
+    color: $colorWhite;
+    @include mediaTablet {
+      @include fontStyle($fontRoboto, $fontBold, 14);
+    }
+    @include mediaMobile {
+      @include fontStyle($fontRoboto, $fontBold, 14);
+    }
+  }
+
+  &__subtitle {
+    @include fontStyle($fontRoboto, $fontNormal, 14);
+    @include fontLh(20);
+    color: $colorWhite;
+    margin: 25px 0;
+    @include mediaTablet {
+      margin: 15px 0;
+      @include fontStyle($fontRoboto, $fontBold, 10);
+    }
+    @include mediaMobile {
+      @include fontStyle($fontRoboto, $fontBold, 10);
+    }
+  }
+
+  &__input {
+    width: 225px;
+    height: 35px;
+    border-radius: 30px;
+    background: $colorWhite;
+    border: none;
+    text-align: start;
+    padding: 0 25px;
+    @include fontStyle($fontRoboto, $fontNormal, 14);
+    @include fontLh(16);
+    &::placeholder {
+      color: $colorLightGray;
+    }
+    &:focus {
+      outline: none !important;
+      border-color: $colorGreen;
+      box-shadow: 0 0 10px $colorGrey;
+    }
+    @include mediaTablet {
+      width: 200px;
+      height: 25px;
+      @include fontStyle($fontRoboto, $fontBold, 12);
+    }
+    @include mediaMobile {
+      text-align: center;
+      @include fontStyle($fontRoboto, $fontBold, 10);
+    }
+  }
+
+  &__btn {
+    width: 170px;
+    height: 35px;
+    color: $colorWhite;
+    background: none;
+    border: 2px solid $colorWhite;
+    border-radius: 30px;
+    text-align: center;
+    @include fontStyle($fontRoboto, $fontNormal, 14);
+    @include fontLh(16);
+    @include cursorPointer;
+    &:active,
+    &:hover {
+      color: $colorGreen;
+      background-color: $colorWhite;
+    }
+    @include mediaTablet {
+      width: 150px;
+      height: 25px;
+      @include fontStyle($fontRoboto, $fontBold, 12);
+    }
+  }
+}

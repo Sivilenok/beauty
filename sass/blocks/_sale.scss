@@ -1,0 +1,81 @@
+.sale {
+  background: url(/img/backgraund/sale.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px 0 0;
+  height: 604px;
+  @include mediaTablet {
+    height: auto;
+  }
+  @include mediaMobile {
+    padding: 30px 10px;
+    height: auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__text {
+    transform: translate(100%, 70%);
+    @include mediaTablet {
+      margin: 50px;
+      transform: translate(0);
+    }
+    @include mediaMobile {
+      transform: translate(0);
+    }
+  }
+
+  &__title {
+    color: $colorWhite;
+    @include fontStyle($fontRoboto, $fontBold, 48);
+    @include fontLh(56);
+    @include mediaTablet {
+      @include fontStyle($fontRoboto, $fontMedium, 32);
+    }
+    @include mediaMobile {
+      @include fontStyle($fontRoboto, $fontMedium, 32);
+    }
+  }
+
+  &__sub-title {
+    color: $colorWhite;
+    @include fontStyle($fontRoboto, $fontNormal, 14);
+    @include fontLh(20);
+    padding: 50px 0;
+    @include mediaTablet {
+      padding: 30px 0;
+      @include fontStyle($fontRoboto, $fontMedium, 12);
+    }
+    @include mediaMobile {
+      padding: 30px 0;
+      @include fontStyle($fontRoboto, $fontMedium, 12);
+    }
+  }
+
+  &__btn {
+    width: 170px;
+    height: 40px;
+    color: $colorWhite;
+    background: none;
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+    letter-spacing: 0.05em;
+    @include fontStyle($fontRoboto, $fontNormal, 14);
+    @include fontLh(16);
+    @include cursorPointer;
+    &:active,
+    &:hover {
+      color: $colorGreen;
+      background-color: $colorWhite;
+    }
+    @include mediaTablet {
+      @include fontStyle($fontRoboto, $fontMedium, 12);
+    }
+    @include mediaMobile {
+      @include fontStyle($fontRoboto, $fontMedium, 12);
+    }
+  }
+}

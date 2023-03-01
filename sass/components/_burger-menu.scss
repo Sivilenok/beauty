@@ -1,0 +1,13 @@
+.burger-menu {
+  display: none;
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: $colorGreen;
+  overflow-x: hidden;
+  z-index: 999;
+  &.active {
+    @include flexDir(column);
+  }
+}

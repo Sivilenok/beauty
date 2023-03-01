@@ -1,0 +1,198 @@
+.header {
+  background-color: $colorWhite;
+  @include flexDir(column);
+
+  .content-box {
+    padding: 0;
+    @include mediaTablet {
+      width: 100%;
+    }
+  }
+}
+
+.top__line {
+  &-menu {
+    margin: 0;
+    height: 50px;
+    background-color: $colorGrey;
+    @include flexCenter;
+    @include mediaMobile {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      padding: 10px;
+    }
+  }
+  &-item {
+    @include transitionAll;
+    @include fontStyle($fontRoboto, $fontNormal, 14);
+    margin: 0 15px;
+    @include mediaMobile {
+      padding: 10px;
+      @include fontStyle($fontRoboto, $fontNormal, 12);
+    }
+  }
+
+  &-link {
+    color: $colorDark;
+    &:hover {
+      color: $colorGreen;
+    }
+
+    &:active {
+      color: $colorGreen;
+    }
+  }
+}
+
+.burger-btn {
+  cursor: pointer;
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 25px;
+  height: 20px;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #000;
+    margin-bottom: 5px;
+  }
+  @include mediaMobile {
+    display: block;
+  }
+}
+
+.second__line {
+  @include flexDir(column);
+
+  &-btn {
+    width: 170px;
+    height: 40px;
+    background: none;
+    border: 2px solid $colorGreen;
+    border-radius: 40px;
+    margin: 20px 0;
+    @include fontStyle($fontRoboto, $fontNormal, 14);
+    @include cursorPointer;
+    &:active,
+    &:hover {
+      color: $colorGreen;
+      background-color: $colorWhite;
+    }
+    @include mediaTablet {
+      width: 130px;
+      height: 35px;
+      @include fontStyle($fontRoboto, $fontNormal, 12);
+    }
+
+    @include mediaMobile {
+      @include fontStyle($fontRoboto, $fontNormal, 12);
+    }
+  }
+  &-wrap {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    @include mediaTablet {
+      gap: 20px;
+      margin: 8px;
+    }
+    @include mediaMobile {
+      display: block;
+      text-align: center;
+    }
+  }
+  &-wrapper {
+    border-bottom: 2px solid $colorGrey;
+    margin: 20px 0;
+    @include flexXY(space-evenly, center);
+    @include mediaMobile {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0;
+      padding: 0 20px;
+    }
+
+    &-img {
+      @include flexY(center);
+    }
+
+    &__btn {
+      @include flexY(center);
+      @include mediaTablet {
+        @include fontStyle($fontRoboto, $fontNormal, 12);
+      }
+      @include mediaMobile {
+        margin: 15px 15px;
+        gap: 80px;
+      }
+    }
+
+    &__number {
+      @include fontStyle($fontRoboto, $fontNormal, 12);
+    }
+  }
+
+  &-menu {
+    @include flexCenter;
+
+    &__wrapper {
+      margin: 30px 0;
+      @include mediaMobile {
+        display: none;
+      }
+    }
+  }
+
+  &-item {
+    @include transitionAll;
+    @include fontStyle($fontRoboto, $fontNormal, 14);
+    @include fontLh(19);
+    margin: 0 20px;
+    @include mediaMobile {
+      padding: 20px 0;
+      @include fontStyle($fontRoboto, $fontNormal, 24);
+    }
+  }
+
+  &-link {
+    color: $colorDark;
+    &:hover {
+      color: $colorGreen;
+      box-shadow: 0 0 10px $colorGreen;
+    }
+    &:active {
+      color: $colorGreen;
+    }
+    @include mediaMobile {
+      color: $colorWhite;
+
+      &:hover {
+        color: $colorDark;
+        box-shadow: 0 0 10px $colorGreen;
+      }
+      &:active {
+        color: $colorDark;
+      }
+    }
+  }
+}
+
+.logo {
+  margin: 20px;
+  @include mediaMobile {
+    width: 50px;
+  }
+
+  &__text {
+    color: $colorGreen;
+    @include fontStyle($fontRoboto, $fontBold, 36);
+    @include mediaMobile {
+      @include fontStyle($fontRoboto, $fontMedium, 24);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import './fonts';
+
+@import './vars';
+
+@import './mixins';
+
+// reset and standart styles
+@import './adjustments';
+
+// Blocks
+
+@import './blocks/header';
+@import './blocks/sale';
+@import './blocks/goods';
+@import './blocks/footer';
+
+// components
+@import './components/burger-menu';
+
